@@ -7,6 +7,10 @@ aws_access_key_id=$AWS_ACCESS_KEY_ID
 aws_secret_access_key=$AWS_SECRET_ACCESS_KEY
 EOF
 
+cat > .env << EOF
+REACT_APP_YOUTUBE_KEY=$YOUTUBE_KEY
+EOF
+
 mkdir .elasticbeanstalk
 touch .elasticbeanstalk/config.yml
 cat > .elasticbeanstalk/config.yml << EOF
