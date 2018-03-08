@@ -17,3 +17,13 @@
     color: red;
   }
 }
+
+.item-cover {
+  margin: 5px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+
+  &.current {
+    border-bottom-color: red;
+  }
+}
