@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'services/axios';
 import Helmet from 'react-helmet';
 import Input from 'react-toolbox/lib/input';
+import { Link } from 'react-router-dom';
 import { Button } from 'react-toolbox/lib/button';
 
 import Player from './Player';
@@ -62,6 +63,7 @@ class Youtube extends Component {
               onClick={() => this.onSearch()}
             />
           </div>
+          <Link to="/instagram">Go to instagram</Link>
           <Player playlists={list} />
         </div>
       </div>

@@ -59,5 +59,5 @@ Look example at file app/components
 6. Database with mongoosejs see more [click here](http://mongoosejs.com/docs/guide.html)
 7. Deployment with aws through Elastic Beanstalk [click here](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html)
 8. Dotenv [click here](https://github.com/bkeepers/dotenv)
-## Demo [click here](https://reactjs-begin.herokuapp.com)
+## Demo [click here](http://youtube-listing.us-east-1.elasticbeanstalk.com/)
 ## Licence: MIT

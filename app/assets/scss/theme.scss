@@ -16,7 +16,7 @@ body {
     }
   }
 
-  .youtube-pages {
+  .youtube-pages, .instagram-pages {
     margin: auto;
     max-width: 800px;
     margin-top: 100px;
@@ -27,6 +27,17 @@ body {
 
       > div {
         flex: 1;
+      }
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        margin: 5px;
+        width: 150px;
+        height: 150px;
       }
     }
   }

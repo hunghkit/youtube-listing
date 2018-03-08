@@ -4,10 +4,12 @@ import Home from 'pages/Home';
 import Login from 'pages/Login';
 import Youtube from 'pages/Youtube';
 import Register from 'pages/Register';
+import Instagram from 'pages/Instagram';
 
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Youtube} />
+    <Route exact path="/instagram" component={Instagram} />
     <Route exact path="/home" component={Home} />
     <Route path="/login" component={Login} />
     <Route path="/register" component={Register} />
