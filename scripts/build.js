@@ -46,7 +46,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
     copyPublicFolder();
     // Start the webpack build
     console.log('Creating an optimized production build...');
-    return Promise.all([build(previousFileSizes, config), build(previousFileSizes, configServer)]);
+    return Promise.all([build(previousFileSizes, configServer)]);
   })
   .then(
     ({ stats, previousFileSizes, warnings }) => {

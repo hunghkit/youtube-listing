@@ -6,6 +6,7 @@ import { Loading } from 'components/Loaders';
 import { withRouter } from 'react-router-dom';
 import axios from 'services/axios';
 import 'assets/scss/theme.scss';
+import { Login } from 'react-facebook';
 import { onSetCurrentUser } from 'actions/currentUser';
 import Routes from './routes';
 
@@ -26,6 +27,8 @@ class Pages extends Component {
         .then(({ user }) => {
           if (user) this.props.setUser(user);
         });
+
+    console.log(Login);
   }
 
   componentDidMount() {

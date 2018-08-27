@@ -250,16 +250,6 @@ module.exports = {
     new InterpolateHtmlPlugin(env.raw),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new webpack.DefinePlugin(env.stringified),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        comparisons: false,
-      },
-      output: {
-        comments: false,
-      },
-      sourceMap: true,
-    }),
     new ExtractTextPlugin({
       filename: cssFilename,
     }),
