@@ -21,21 +21,19 @@ class Youtube extends Component {
     const { url = '', list = [] } = this.state;
     const link = url.replace(/\/\?().*/g, '');
 
-    axios.get(`${link}/?__a=1&${!!maxId && ['max_id', maxId].join('=')}`)
+    axios.get(`${link}?__a=1&${!!maxId && ['max_id', maxId].join('=')}`)
       .then((rs) => rs.data)
       .then((rs) => {
-        const { media } = rs.user;
-        this.setState({ list: [...(!!maxId && list), ...media.nodes], page: media.page_info });
+        const { edge_owner_to_timeline_media } = rs.graphql.user;
+        this.setState({ list: [...(!!maxId && list), ...edge_owner_to_timeline_media.edges], page: edge_owner_to_timeline_media.page_info });
       });
   }
 
-  renderItem(item, index) {
-    return (
-      <a href={`https://www.instagram.com/p/${item.code}`} key={index} target="_blank">
-        <img src={item.thumbnail_src} alt={item.caption} />
-      </a>
-    );
-  }
+  renderItem = ({ node: item }, index) => (
+    <a href={`https://www.instagram.com/p/${item.shortcode}`} key={index} target="_blank">
+      <img src={item.thumbnail_src} alt={item.caption} />
+    </a>
+  );
 
   render() {
     const { list = [], url, page = {} } = this.state;
